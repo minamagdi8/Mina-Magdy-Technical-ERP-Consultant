@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Mina Magdy Khalf — Technical ERP Consultant with 3+ years on Oracle NetSuite, transitioning to Oracle Fusion Cloud ERP.">
+<meta name="theme-color" content="#F3F5F5">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Mina Magdy">
 <title>Mina Magdy Khalf — Technical ERP Consultant</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,6 +60,7 @@
     display:flex;align-items:center;gap:4px;
     overflow-x:auto;white-space:nowrap;
     scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
   }
   .topnav-inner::-webkit-scrollbar{display:none;}
   .topnav-inner a{
@@ -62,6 +68,13 @@
     text-decoration:none;padding:16px 14px;
   }
   .topnav-inner a:hover{color:var(--blue-deep);}
+  .topnav::after{
+    content:"";
+    position:absolute;top:0;right:0;bottom:0;width:28px;
+    background:linear-gradient(to right, rgba(243,245,245,0), rgba(243,245,245,0.95));
+    pointer-events:none;
+  }
+  @media (min-width:761px){ .topnav::after{ display:none; } }
 
   /* ---------- HERO ---------- */
   .hero{
@@ -322,7 +335,6 @@
         <div class="lead">Cairo, Egypt · Open to roles in Egypt, remote, or hybrid with limited travel.</div>
         <div class="cta-row">
           <a class="btn btn-primary" href="#cases">View case studies</a>
-          <a class="btn btn-secondary" href="Mina_Magdy_CV_Fusion_Pivot.docx">Download CV</a>
         </div>
       </div>
       <div class="photo-stage">
@@ -395,41 +407,44 @@
   <section id="experience">
     <h2 class="section-title">Experience</h2>
     <div class="timeline">
+      <div class="case-group-label" style="margin-bottom:2px;">Azdan · Egypt, Cairo</div>
+      <div class="case-group-sub" style="margin-bottom:18px;">Sep 2023 – Present</div>
       <div class="tl-item">
-        <div class="tl-role">Technical NetSuite Consultant — Team Leader, Integration Team</div>
-        <div class="tl-org">Azdan · Egypt, Cairo</div>
+        <div class="tl-role">Technical NetSuite Consultant – Team Leader, Integration Team</div>
         <div class="tl-dates">Dec 2024 – Present</div>
         <ul>
-          <li>Lead the NetSuite Integration Team across design, data mapping, development, and delivery of integrations with banking platforms and payment gateways</li>
-          <li>Architect RESTlets and APIs for data exchange between NetSuite and external applications</li>
-          <li>Mentor junior developers and enforce best practices in API development and NetSuite scripting</li>
+          <li>Lead the NetSuite Integration Team, overseeing design, data mapping, development, and delivery of integrations with banking platforms, payment gateways, and third-party systems</li>
+          <li>Conduct code reviews, mentor junior developers, and enforce best practices in API development and NetSuite scripting</li>
+          <li>Own technical documentation — BRDs, data mapping sheets, and integration flow diagrams — for cross-team communication</li>
         </ul>
       </div>
       <div class="tl-item">
         <div class="tl-role">Technical NetSuite Consultant — Outsourced to a UAE Real Estate Company</div>
-        <div class="tl-org">Azdan · Egypt, Cairo</div>
+        <div class="tl-org">Embedded with Deyaar Real Estate</div>
         <div class="tl-dates">Jan 2024 – Nov 2024</div>
         <ul>
-          <li>Investigated and resolved issues across customizations, integrations, and general NetSuite functionality</li>
-          <li>Designed and implemented a full NetSuite module end-to-end, from requirements through deployment</li>
+          <li>Owned day-to-day enhancement and support of existing NetSuite integrations and automations — resolving issues like missing invoices, undelivered emails, and unsynced receipts</li>
+          <li>Built workflows and saved searches, and automated recurring manual tasks flagged by users</li>
         </ul>
       </div>
       <div class="tl-item">
         <div class="tl-role">Technical NetSuite Consultant — Vendor Company Engagement</div>
-        <div class="tl-org">Azdan · Egypt, Cairo</div>
         <div class="tl-dates">Sep 2023 – Dec 2023</div>
         <ul>
-          <li>Supported multiple clients with NetSuite ERP implementations and customizations using SuiteScript</li>
-          <li>Designed and implemented integrations with external systems using web services and RESTful APIs</li>
+          <li>Completed discrete, task-level SuiteScript work across multiple clients' NetSuite instances — e.g. automating email notifications, preventing duplicate customer record creation based on defined criteria, and generating reversal journal entries after credit memo creation</li>
+          <li>Designed and built custom reports using HTML and CSS</li>
         </ul>
       </div>
+
+      <div class="case-group-label" style="margin-top:24px;margin-bottom:2px;">Lightidea · Egypt, Cairo</div>
+      <div class="case-group-sub" style="margin-bottom:18px;">Dec 2022 – Sep 2023</div>
       <div class="tl-item">
         <div class="tl-role">Technical NetSuite Consultant</div>
-        <div class="tl-org">Lightidea · Egypt, Cairo</div>
-        <div class="tl-dates">Dec 2022 – Sep 2023</div>
         <ul>
           <li>Automated business processes using SuiteScript 2.0 and workflow</li>
+          <li>Customized NetSuite records and forms using SuiteBuilder</li>
           <li>Migrated legacy data through data mapping, extraction, and transformation</li>
+          <li>Delivered training sessions, documentation, and user guides to help customers navigate NetSuite</li>
         </ul>
       </div>
     </div>
@@ -679,6 +694,8 @@
           <li>Oracle NetSuite AI Foundations Associate — Nov 2025</li>
           <li>Claude 101 — Anthropic, May 2026</li>
           <li>Oracle Fusion Cloud Applications ERP Process Essentials — In Progress</li>
+          <li>OIC — In Progress</li>
+          <li><a href="https://www.udemy.com/course/oracle-database-12c-sql-certified-associate-1z0-071/" target="_blank" rel="noopener">Oracle Database SQL Certified Associate (1Z0-071)</a> — In Progress</li>
         </ul>
       </div>
       <div>
@@ -699,7 +716,7 @@
     <h2 class="section-title">Contact</h2>
     <div class="contact-row">
       <div><span>Email</span><a href="mailto:mina.magdy8221@gmail.com">mina.magdy8221@gmail.com</a></div>
-      <div><span>Phone</span>01275324446</div>
+      <div><span>Phone</span><a href="tel:+201275324446">01275324446</a></div>
       <div><span>LinkedIn</span>Mina Magdy</div>
       <div><span>Location</span>Cairo, Egypt</div>
     </div>
